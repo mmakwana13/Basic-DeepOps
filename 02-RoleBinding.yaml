@@ -1,0 +1,14 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: owner-binding
+  namespace: megh
+subjects:
+- kind: User
+  name: megh
+  apiGroup: ""
+roleRef:
+  kind: ClusterRole
+  name: owner
+  apiGroup: ""
+
